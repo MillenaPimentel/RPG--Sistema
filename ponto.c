@@ -1,3 +1,5 @@
+int selec = 0;
+
 scanf("%selec", &selec);
 
     switch (selec){
