@@ -27,3 +27,4 @@ printf("\n personagem adicionado com sucesso!\n");
 printf(" nome: %c\n", p.nome);
 printf(" int: %d\n", p.nivel);
 printf(" dado: %d\n", p.dado);
+}
