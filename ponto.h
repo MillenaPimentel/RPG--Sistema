@@ -8,3 +8,7 @@ typedef struct{
     int dado;
     int iniciativa;
 }personagem;
+
+int adicionarPersongem(){
+    
+}
