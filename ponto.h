@@ -28,3 +28,6 @@ printf(" nome: %c\n", p.nome);
 printf(" int: %d\n", p.nivel);
 printf(" dado: %d\n", p.dado);
 }
+
+int removerPersonagem(){
+}
