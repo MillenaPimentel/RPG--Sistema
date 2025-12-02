@@ -27,6 +27,27 @@ int adicionarPersongem(void){
     
 }
 
+int removerPersonagem(void){
+    if (quantPersonagens < 1){
+        printf("voce nao possui personagens.\n");
+    }
+    else{
+        int ID = 0;
+        printf("selecione qual personagem deseja excluir: \n");
+        int mostrarPersonagens();
+        scanf("%d", &ID);
+        if(ID < 0 || ID > quantPersonagens - 1){
+            printf("esse ID eh invalido\n");
+            return 0;
+        }
+            for(int i = ID; i < quantPersonagens - 1; i++){
+                lista[i] = lista[i + 1];
+            }
+            quantPersonagens--;
+            printf("personagem removido com sucesso\n");
+    }
+}
+
 int rolagem(int dado){
     return rand() % (dado + 1);
 }
