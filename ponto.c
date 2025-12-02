@@ -1,8 +1,8 @@
 #include "ponto.h"
 
-int rolagem(int dado){
-    return rand() % (dado + 1);
-}
+
+int quantPersonagens = 0;
+personagem lista[50];
 
 int adicionarPersongem(){
     if(quantPersonagens >= 50){
@@ -23,4 +23,8 @@ printf(" int: %d\n", p.nivel);
 printf(" dado: %d\n", p.dado);
      quantPersonagens++;
     }
+}
+
+int rolagem(int dado){
+    return rand() % (dado + 1);
 }
