@@ -20,5 +20,8 @@ int removerPersonagem(){
 int editarPersonagem(){
 }
 
+int mostrarPersonagens(){
+}
+
 int OrdemCombate(){
 }
