@@ -17,5 +17,8 @@ int adicionarPersongem(){
 int removerPersonagem(){
 }
 
+int editarPersonagem(){
+}
+
 int OrdemCombate(){
 }
