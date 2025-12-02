@@ -2,6 +2,8 @@
 
 int selec = 0;
 
+while (selec != 5){
+
 scanf("%selec", &selec);
 
     switch (selec){
@@ -17,4 +19,8 @@ scanf("%selec", &selec);
         case 4:
             // iniciar combate void
         break;
+        case 5:
+            //sair do trem
+        break;
     }
+}
