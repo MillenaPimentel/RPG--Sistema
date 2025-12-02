@@ -1,4 +1,5 @@
-int selec;
+#include "ponto.h"
+
 typedef struct{
     char nome[50];
     int nivel;
@@ -11,7 +12,7 @@ int rolagem(int dado){
 }
 
 int adicionarPersongem(){
-    if(quant >= 50){
+    if(quantPersonagens >= 50){
         printf(" voce ja atingiu o maximo de personagens\n ");
 }
     else{
@@ -27,6 +28,6 @@ printf("\n personagem adicionado com sucesso!\n");
 printf(" nome: %c\n", p.nome);
 printf(" int: %d\n", p.nivel);
 printf(" dado: %d\n", p.dado);
-     quant++;
+     quantPersonagens++;
     }
 }
