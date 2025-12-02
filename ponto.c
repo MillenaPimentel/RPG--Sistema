@@ -1,3 +1,15 @@
+int selec;
+typedef struct{
+    char nome[50];
+    int nivel;
+    int dado;
+    int iniciativa;
+}Personagem;
+
+int rolagem(int dado){
+    return rand() % (dado + 1);
+}
+
 int adicionarPersongem(){
     if(quant >= 50){
         printf(" voce ja atingiu o maximo de personagens\n ");
