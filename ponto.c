@@ -2,7 +2,7 @@
 
 
 int quantPersonagens = 0;
-personagem lista[50];
+Personagem lista[50];
 
 int adicionarPersongem(void){
     if(quantPersonagens >= 50){
