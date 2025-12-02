@@ -1,3 +1,5 @@
+#include "ponto.h"
+
 int selec = 0;
 
 scanf("%selec", &selec);
