@@ -8,8 +8,8 @@ typedef struct{
 
 int rolagem(int dado){
 }
+int quantPersonagens;
 Personagem lista[50];
-int quant;
 int adicionarPersongem(){
 }
 
