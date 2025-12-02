@@ -1,23 +1,33 @@
+#include <stdio.h>
 #include "ponto.h"
 
 int selec = 0;
 
 while (selec != 5){
 
-scanf("%selec", &selec);
+scanf("%d", &selec);
+
+printf("\nBem vindo jogador.\n\n");
+printf("1 - Ver meus personagens.\n");
+printf("2 - Adicionar Personagem.\n");
+printf("3 - Remover Personagem.\n");
+printf("4 - Iniciar Combate.\n");
+printf("5 - Finalizar.\n");
+
+
 
     switch (selec){
         case 1:
-            // print da lista
+            mostrarPersonagens();
             break;
         case 2:
-            // adicionar personagem
+            adicionarPersonagem();
         break;
         case 3:
-            // excluir personagem
+            removerPersonagem();
         break;
         case 4:
-            // iniciar combate void
+            iniciarCombate();
         break;
         case 5:
             //sair do trem
