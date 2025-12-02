@@ -6,20 +6,11 @@ typedef struct{
     int iniciativa;
 }Personagem;
 
-int rolagem(int dado){
-}
+int rolagem(int dado);
 int contagemTurno;
-int adicionarPersongem(){
-}
-
-int removerPersonagem(){
-}
-
-int editarPersonagem(){
-}
-
-int mostrarPersonagens(){
-}
-
-int OrdemCombate(){
-}
+int adicionarPersongem(void);
+int removerPersonagem(void);
+int editarPersonagem(void);
+int mostrarPersonagens(void);
+int iniciarCombate(void);
+int OrdemCombate(void);
