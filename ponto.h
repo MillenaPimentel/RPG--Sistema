@@ -9,8 +9,6 @@ typedef struct{
 int rolagem(int dado){
 }
 int contagemTurno;
-int quantPersonagens;
-Personagem lista[50];
 int adicionarPersongem(){
 }
 
