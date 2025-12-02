@@ -15,3 +15,5 @@ int adicionarPersongem(){
 
 int removerPersonagem(){
 }
+
+int 
