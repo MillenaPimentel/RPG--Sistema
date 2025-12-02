@@ -4,6 +4,12 @@
 int quantPersonagens = 0;
 Personagem lista[50];
 
+int mostrarPersonagens(){
+    for(int i = 0; i < quantPersonagens; i++){
+        printf("ID %d - %c\n", i, lista[i].nome);
+    }
+}
+
 int adicionarPersongem(void){
     if(quantPersonagens >= 50){
         printf(" voce ja atingiu o maximo de personagens\n ");
