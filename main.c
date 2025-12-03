@@ -30,6 +30,9 @@ int main() {
             case 5:
                 loopCombate(personagens, &qtdPersonagens, &metodoOrdenacao);
                 break;
+            case 6:
+            adicionarArquivo(qtd, lista);
+                break;
             case 0:
                 printf("Saindo do programa...\n");
                 break;
