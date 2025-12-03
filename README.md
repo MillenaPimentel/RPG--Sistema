@@ -38,39 +38,44 @@ A cada novo turno:
 
 iniciativa = nivel + rolagem do dado
 
-Métodos de Ordenação
+## Métodos de Ordenação
+
 O usuário pode escolher qual algoritmo de ordenação utilizar durante a execução:
-🔹 Quick Sort
-Algoritmo eficiente (complexidade média O(n log n))
-Realiza partições recursivas no vetor
-Ideal para grandes volumes de dados
-🔹 Insertion Sort
-Algoritmo simples
-Eficiente para listas pequenas
-Fácil de compreender e implementar
+
+# Quick Sort
+
+- Algoritmo eficiente (complexidade média O(n log n))
+- Realiza partições recursivas no vetor
+- Ideal para grandes volumes de dados
+  
+# Insertion Sort
+- Algoritmo simples
+- Eficiente para listas pequenas
+- Fácil de compreender e implementar
 A ordenação sempre ocorre em ordem decrescente de iniciativa.
-🕹 Fluxo de Execução
-1️⃣ Cadastrar personagens
-2️⃣ Escolher método de ordenação
-3️⃣ Iniciar combate
-4️⃣ Sistema rola os dados automaticamente
-5️⃣ Personagens são ordenados por iniciativa
-6️⃣ Menu permite:
-adicionar personagem
-remover personagem
-avançar turno
-trocar método
-encerrar combate
+  
+## Fluxo de Execução
+1. Cadastrar personagens
+2. Escolher método de ordenação
+3. Iniciar combate
+4. Sistema rola os dados automaticamente
+5. Personagens são ordenados por iniciativa
+6. Menu permite:
+- adicionar personagem
+- remover personagem
+- avançar turno
+- trocar método
+- encerrar combate
 
 Aplicação Acadêmica
-Este projeto foi desenvolvido para praticar:
-Estruturas de Dados (listas e vetores)
-Funções e modularização
-Uso de ponteiros
-Algoritmos de ordenação
-Manipulação de strings
-Entrada de dados do usuário
-Organização de projeto em múltiplos arquivos
+- Este projeto foi desenvolvido para praticar:
+- Estruturas de Dados (listas e vetores)
+- Funções e modularização
+- Uso de ponteiros
+- Algoritmos de ordenação
+- Manipulação de strings
+- Entrada de dados do usuário
+- Organização de projeto em múltiplos arquivos
 
 👥 Integrantes do Grupo
 
