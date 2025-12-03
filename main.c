@@ -1,36 +1,44 @@
 #include <stdio.h>
-#include "ponto.h"
+#include <time.h>
+#include <stdlib.h>
+#include "rpg.h"
 
-int selec = 0;
+int main() {
+    Personagem personagens[MAX_PERSONAGENS];
+    int qtdPersonagens = 0;
+    int metodoOrdenacao = 1; // 1 = Quick Sort, 2 = Insertion Sort
 
-while (selec != 5){
+    srand(time(NULL)); // semente do rand
 
-scanf("%d", &selec);
+    int opcao;
+    do {
+        opcao = menuPrincipal();
 
-printf("\nBem vindo jogador.\n\n");
-printf("1 - Ver meus personagens.\n");
-printf("2 - Adicionar Personagem.\n");
-printf("3 - Remover Personagem.\n");
-printf("4 - Iniciar Combate.\n");
-printf("5 - Finalizar.\n");
+        switch (opcao) {
+            case 1:
+                criarPersonagem(personagens, &qtdPersonagens);
+                break;
+            case 2:
+                listarPersonagens(personagens, qtdPersonagens);
+                break;
+            case 3:
+                removerPersonagem(personagens, &qtdPersonagens);
+                break;
+            case 4:
+                selecionarMetodoOrdenacao(&metodoOrdenacao);
+                break;
+            case 5:
+                loopCombate(personagens, &qtdPersonagens, &metodoOrdenacao);
+                break;
+            case 0:
+                printf("Saindo do programa...\n");
+                break;
+            default:
+                printf("Opcao invalida. Tente novamente.\n");
+        }
 
+    } while (opcao != 0);
 
-
-    switch (selec){
-        case 1:
-            mostrarPersonagens();
-            break;
-        case 2:
-            adicionarPersonagem();
-        break;
-        case 3:
-            removerPersonagem();
-        break;
-        case 4:
-            iniciarCombate();
-        break;
-        case 5:
-            //sair do trem
-        break;
-    }
+    return 0;
 }
+
