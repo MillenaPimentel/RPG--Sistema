@@ -72,6 +72,25 @@ void listarPersonagens(Personagem *lista, int qtd) {
     }
 }
 
+
+void salvarPersonagens(int qtd, Personagem *lista){
+    FILE *arquivo = fopen("personagens.txt", "w");
+    if (arquivo == NULL){
+        printf("Parece ter algo errado com o seu arquivo :( .");
+    return;
+    }
+    else{
+
+    
+        for (int i = 0; i < qtd; i++){
+            fprintf(arquivo, "%s;%d;%d;%d\n", lista[i].nome, lista[i].nivel, lista[i].dado, lista[i].iniciativa);
+
+        }
+        fclose(arquivo);
+        return;
+    }
+}
+
 void criarPersonagem(Personagem *lista, int *qtd) {
     if (*qtd >= MAX_PERSONAGENS) {
         printf("\nLista cheia! Nao e possivel adicionar mais personagens.\n");
@@ -99,8 +118,61 @@ void criarPersonagem(Personagem *lista, int *qtd) {
 
     lista[*qtd] = p;
     (*qtd)++;
+    salvarPersonagens(*qtd, lista);
 
     printf("Personagem criado com sucesso!\n");
+}
+
+void adicionarArquivo(int *qtd, Personagem *lista) {
+    if (*qtd >= MAX_PERSONAGENS) {
+        printf("Voce atingiu o maximo de personagens (%d/%d).\n", *qtd, MAX_PERSONAGENS);
+        return;
+    }
+
+    char nomeArquivo[100];
+    printf("\n--- Importar Arquivo ---\n");
+    printf("Digite o nome do arquivo (ex: personagens.txt): ");
+    scanf("%99s", nomeArquivo);
+    limparBuffer();
+    FILE *arquivo = fopen(nomeArquivo, "r");
+
+    if (arquivo == NULL) {
+        printf("Erro: Parece ter algo de errado com o arquivo :( '%s'. Verifique o nome.\n", nomeArquivo);
+        return;
+    }
+    int personagensImportados = 0;
+    while (*qtd < MAX_PERSONAGENS && 
+           fscanf(arquivo, "%49[^;];%d;%d;%d\n", 
+                  lista[*qtd].nome, 
+                  &lista[*qtd].nivel, 
+                  &lista[*qtd].dado, 
+                  &lista[*qtd].iniciativa) == 4) {
+        (*qtd)++;
+        personagensImportados++;
+    }
+
+    fclose(arquivo);
+
+    if (personagensImportados > 0) {
+        printf("Sucesso! %d personagens importados de '%s'.\n", personagensImportados, nomeArquivo);
+        salvarPersonagens(*qtd, lista); 
+    } else {
+        printf("Nao ha nenhum personagem neste arquivo.\n");
+    }
+    salvarPersonagens(*qtd, lista);
+}
+    void carregarArquivo(int *qtd, Personagem *lista){
+    FILE *arquivo = fopen("personagens.txt", "r");
+    if (arquivo == NULL){
+        printf("o arquivo parece estar vazio...");
+    return;
+    }
+    else{
+        while (*qtd < MAX_PERSONAGENS && fscanf(arquivo, "%49[^;];%d;%d;%d\n", lista[*qtd].nome, &lista[*qtd].nivel, &lista[*qtd].dado, &lista[*qtd].iniciativa) == 4){
+            (*qtd)++;
+        }
+        fclose(arquivo);
+    }
 }
 
 void removerPersonagem(Personagem *lista, int *qtd) {
@@ -108,7 +180,6 @@ void removerPersonagem(Personagem *lista, int *qtd) {
         printf("\nNenhum personagem para remover.\n");
         return;
     }
-
     listarPersonagens(lista, *qtd);
 
     int indice;
@@ -128,9 +199,9 @@ void removerPersonagem(Personagem *lista, int *qtd) {
     }
 
     (*qtd)--;
+    salvarPersonagens(*qtd, lista);
     printf("Personagem removido com sucesso.\n");
 }
-
 
 static void trocar(Personagem *a, Personagem *b) {
     Personagem temp = *a;
