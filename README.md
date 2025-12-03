@@ -77,8 +77,8 @@ Aplicação Acadêmica
 - Entrada de dados do usuário
 - Organização de projeto em múltiplos arquivos
 
-👥 Integrantes do Grupo
+Integrantes do Grupo
 
-Millena Costa Pimentel 
-Rodrigo Frota Telles da Silva
-Letícia Barbosa Taveira
+- Millena Costa Pimentel 
+- Rodrigo Frota Telles da Silva
+- Letícia Barbosa Taveira
