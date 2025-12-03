@@ -11,6 +11,9 @@ typedef struct{
 
 int escolherDado();
 int rolarDado(int dado);
+void adicionarArquivo(int *qtd, Personagem *lista);
+void salvarPersonagens(int qtd, Personagem *lista);
+void carregarArquivo(int *qtd, Personagem *lista);
 void criarPersonagem(Personagem *lista, int *qtd);
 void editarPersonagem(Personagem *lista, int *qtd);
 void removerPersonagem(Personagem *lista, int *qtd);
