@@ -308,6 +308,7 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
         printf("3 - Avancar para o proximo turno\n");
         printf("4 - Trocar metodo de ordenacao\n");
         printf("5 - Encerrar combate e voltar ao menu principal\n");
+        printf("6 - Adicionar um arquivo com personagens\n");
         printf("Opcao: ");
 
         int opcao;
@@ -334,6 +335,9 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
             case 5:
                 continuar = 0;
                 break;
+            case 6:
+            adicionarArquivo(qtd, lista);
+                break;
             default:
                 printf("Opcao invalida.\n");
         }
@@ -348,6 +352,7 @@ int menuPrincipal() {
     printf("3 - Remover personagem\n");
     printf("4 - Selecionar método de ordenação\n");
     printf("5 - Iniciar combate\n");
+    printf("6 - Adicionar um arquivo com personagens\n");
     printf("0 - Sair\n");
     printf("Opção: ");
     scanf("%d", &opcao);
