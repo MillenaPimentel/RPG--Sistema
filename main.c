@@ -23,6 +23,7 @@ int main() {
                 break;
             case 3:
                 removerPersonagem(personagens, &qtdPersonagens);
+                salvarPersonagens(qtdPersonagens, personagens); 
                 break;
             case 4:
                 selecionarMetodoOrdenacao(&metodoOrdenacao);
@@ -31,7 +32,7 @@ int main() {
                 loopCombate(personagens, &qtdPersonagens, &metodoOrdenacao);
                 break;
             case 6:
-            adicionarArquivo(qtd, lista);
+            adicionarArquivo(&qtdPersonagens, personagens);
                 break;
             case 0:
                 printf("Saindo do programa...\n");
