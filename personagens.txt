@@ -1,1 +1,13 @@
-
+Guerreiro;20;6;24
+Clerigo;20;4;23
+Arqueiro;18;6;23
+Clerigo;20;4;23
+Mago;15;8;22
+Arqueiro;18;6;22
+Guerreiro;20;6;21
+Clerigo;20;4;21
+Mago;15;8;20
+Arqueiro;18;6;20
+cris;8;12;19
+Mago;15;8;19
+tati;18;10;19
