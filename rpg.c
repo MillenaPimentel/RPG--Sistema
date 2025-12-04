@@ -109,7 +109,7 @@ void criarPersonagem(Personagem *lista, int *qtd) {
         scanf("%d", &p.nivel);
         limparBuffer();
         if (p.nivel < 1 || p.nivel > 20) {
-            printf("Nível inválido! Digite um valor entre 1 e 20.\n");
+            printf("Nivel invalido! Digite um valor entre 1 e 20.\n");
         }
     } while (p.nivel < 1 || p.nivel > 20);
 
@@ -164,7 +164,7 @@ void adicionarArquivo(int *qtd, Personagem *lista) {
     void carregarArquivo(int *qtd, Personagem *lista){
     FILE *arquivo = fopen("personagens.txt", "r");
     if (arquivo == NULL){
-        printf("o arquivo parece estar vazio...");
+        printf("\nO arquivo parece estar vazio...\n");
     return;
     }
     else{
@@ -350,11 +350,11 @@ int menuPrincipal() {
     printf("1 - Criar personagem\n");
     printf("2 - Listar personagens\n");
     printf("3 - Remover personagem\n");
-    printf("4 - Selecionar método de ordenação\n");
+    printf("4 - Selecionar metodo de ordenacao\n");
     printf("5 - Iniciar combate\n");
     printf("6 - Adicionar um arquivo com personagens\n");
     printf("0 - Sair\n");
-    printf("Opção: ");
+    printf("Opcao: ");
     scanf("%d", &opcao);
     limparBuffer();
     return opcao;
