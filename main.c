@@ -9,6 +9,7 @@ int main() {
     int metodoOrdenacao = 1; // 1 = Quick Sort, 2 = Insertion Sort
 
     srand(time(NULL)); // semente do rand
+    carregarArquivo(&qtdPersonagens, personagens);
 
     int opcao;
     do {
