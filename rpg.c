@@ -131,7 +131,7 @@ void adicionarArquivo(int *qtd, Personagem *lista) {
 
     char nomeArquivo[100];
     printf("\n--- Importar Arquivo ---\n");
-    printf("Digite o nome do arquivo (ex: personagens.txt): ");
+    printf("O arquivo deve estar dentro da pasta output em RPG--Sistema-main...\nDigite o nome do arquivo (ex: personagens.txt): ");
     scanf("%99s", nomeArquivo);
     limparBuffer();
     FILE *arquivo = fopen(nomeArquivo, "r");
