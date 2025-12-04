@@ -298,7 +298,6 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
         printf("          TURNO %d\n", turno);
         printf("==============================\n");
 
-        calcularIniciativa(lista, *qtd);
         ordenar(lista, *qtd, *metodoOrdenacao);
         exibirOrdemDeAcao(lista, *qtd);
 
@@ -318,6 +317,10 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
         switch (opcao) {
             case 1:
                 criarPersonagem(lista, qtd);
+                int novoPersonagem = *qtd - 1; 
+                int resultadoDado = rolarDado(lista[novoPersonagem].dado);
+                lista[novoPersonagem].iniciativa = lista[novoPersonagem].nivel + resultadoDado;
+                printf(">> %s rolou d%d = %d e se juntou ao combate com iniciativa %d\n", lista[novoPersonagem].nome,lista[novoPersonagem].dado, resultadoDado, lista[novoPersonagem].iniciativa);
                 break;
             case 2:
                 removerPersonagem(lista, qtd);
@@ -327,6 +330,7 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
                 }
                 break;
             case 3:
+                calcularIniciativa(lista, *qtd);
                 turno++;
                 break;
             case 4:
