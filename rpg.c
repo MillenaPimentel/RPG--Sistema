@@ -83,7 +83,11 @@ void salvarPersonagens(int qtd, Personagem *lista){
 
     
         for (int i = 0; i < qtd; i++){
-            fprintf(arquivo, "%s;%d;%d;%d\n", lista[i].nome, lista[i].nivel, lista[i].dado, lista[i].iniciativa);
+            fprintf(arquivo, "%s;%d;%d;%d\n", 
+                lista[i].nome, 
+                lista[i].nivel, 
+                lista[i].dado, 
+                lista[i].iniciativa);
 
         }
         fclose(arquivo);
@@ -168,7 +172,11 @@ void adicionarArquivo(int *qtd, Personagem *lista) {
     return;
     }
     else{
-        while (*qtd < MAX_PERSONAGENS && fscanf(arquivo, "%49[^;];%d;%d;%d\n", lista[*qtd].nome, &lista[*qtd].nivel, &lista[*qtd].dado, &lista[*qtd].iniciativa) == 4){
+        while (*qtd < MAX_PERSONAGENS && fscanf(arquivo, "%49[^;];%d;%d;%d\n", 
+            lista[*qtd].nome, 
+            &lista[*qtd].nivel, 
+            &lista[*qtd].dado, 
+            &lista[*qtd].iniciativa) == 4){
             (*qtd)++;
         }
         fclose(arquivo);
@@ -320,7 +328,11 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
                 int novoPersonagem = *qtd - 1; 
                 int resultadoDado = rolarDado(lista[novoPersonagem].dado);
                 lista[novoPersonagem].iniciativa = lista[novoPersonagem].nivel + resultadoDado;
-                printf(">> %s rolou d%d = %d e se juntou ao combate com iniciativa %d\n", lista[novoPersonagem].nome,lista[novoPersonagem].dado, resultadoDado, lista[novoPersonagem].iniciativa);
+                printf(">> %s rolou d%d = %d e se juntou ao combate com iniciativa %d\n", 
+                    lista[novoPersonagem].nome,
+                    lista[novoPersonagem].dado, 
+                    resultadoDado, 
+                    lista[novoPersonagem].iniciativa);
                 break;
             case 2:
                 removerPersonagem(lista, qtd);
