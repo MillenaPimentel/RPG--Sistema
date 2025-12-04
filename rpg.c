@@ -323,17 +323,22 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
         limparBuffer();
 
         switch (opcao) {
-            case 1:
+            case 1:{
+                int qtdAntiga = *qtd;
                 criarPersonagem(lista, qtd);
-                int novoPersonagem = *qtd - 1; 
-                int resultadoDado = rolarDado(lista[novoPersonagem].dado);
-                lista[novoPersonagem].iniciativa = lista[novoPersonagem].nivel + resultadoDado;
-                printf(">> %s rolou d%d = %d e se juntou ao combate com iniciativa %d\n", 
-                    lista[novoPersonagem].nome,
-                    lista[novoPersonagem].dado, 
-                    resultadoDado, 
-                    lista[novoPersonagem].iniciativa);
+                printf("\n--- Rolando iniciativa para os novos combatentes ---\n");
+
+                for (int i = qtdAntiga; i < *qtd; i++) {    
+                    int rolagem = rolarDado(lista[i].dado);
+                    lista[i].iniciativa = lista[i].nivel + rolagem;
+                    printf(">> %s rolou d%d = %d e se juntou ao combate com Iniciativa: %d\n", 
+                        lista[i].nome,
+                        lista[i].dado, 
+                        rolagem, 
+                        lista[i].iniciativa);
+                    }
                 break;
+            }
             case 2:
                 removerPersonagem(lista, qtd);
                 if (*qtd == 0) {
@@ -351,9 +356,24 @@ void loopCombate(Personagem *lista, int *qtd, int *metodoOrdenacao) {
             case 5:
                 continuar = 0;
                 break;
-            case 6:
+            case 6:{
+            int qtdAntiga = *qtd;
             adicionarArquivo(qtd, lista);
+            if (*qtd > qtdAntiga) {
+                    printf("\n--- Rolando iniciativa para os novos combatentes ---\n");
+
+                    for (int i = qtdAntiga; i < *qtd; i++) {    
+                        int rolagem = rolarDado(lista[i].dado);
+                        lista[i].iniciativa = lista[i].nivel + rolagem;
+                        printf(">> %s rolou d%d = %d e se juntou ao combate com Iniciativa: %d\n", 
+                               lista[i].nome,
+                               lista[i].dado, 
+                               rolagem, 
+                               lista[i].iniciativa);
+                        }
+                }
                 break;
+            }
             default:
                 printf("Opcao invalida.\n");
         }
