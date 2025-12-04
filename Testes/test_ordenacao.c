@@ -21,7 +21,7 @@ void testar_ordenacao() {
     lista[2].dado = 20;
     lista[2].iniciativa = 10;
 
-    // 2 = Insertion Sort (pelo seu código)
+    // 2 = Insertion Sort 
     ordenar(lista, 3, 2);
 
     if (lista[0].iniciativa == 15 &&
