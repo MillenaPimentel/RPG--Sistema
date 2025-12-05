@@ -35,8 +35,8 @@ Formato de cada linha:
 
 Na pasta raiz do projeto:
 
-gcc Testes/test_carregar.c rpg.c -o Testes/test_carregar.exe
-Testes\test_carregar.exe
+gcc Testes/test_iniciativa.c rpg.c -o Testes/test_iniciativa.exe
+Testes\test_iniciativa.exe
 
 
 ## Resultado esperado
