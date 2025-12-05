@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "rpg.h"
+#include "../rpg.h"
 
 // Função auxiliar para imprimir resultado do teste
 void testar_ordenacao() {
