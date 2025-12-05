@@ -1,91 +1,38 @@
-# Testes de iniciativa
+# Testes de Iniciativa
 
-Arquivo de testes: `test_iniciativa.c`  
-Função de lógica testada: cálculo da iniciativa (nível + valor do dado)
+**Arquivo de testes:** `Testes/test_iniciativa.c`  
+**Função testada:** `calcularIniciativa()`  
+**Lógica verificada:** cálculo da iniciativa (`nível + valor do dado`)
 
-## Caso de teste 1 – Iniciativa simples
+## Caso de Teste 1 – Iniciativa Simples
 
-- Objetivo: verificar se a iniciativa é calculada corretamente como `nivel + dado`.
-- Implementação:
-  - Foi criada uma função de teste `calcularIniciativa_teste`, que recebe um valor fixo de dado (sem aleatoriedade).
-- Entrada:
-  - Personagem com:
-    - nome: "Heroi"
-    - nivel: 5
-    - dado: d6
-    - iniciativa inicial: 0
-  - Valor do dado usado no teste: 3
-- Passos para executar:
-  1. Na pasta raiz do projeto, compilar:
-     ```
-     gcc Testes/test_iniciativa.c rpg.c -o test_iniciativa.exe
-     ```
-  2. Executar:
-     ```
-     test_iniciativa.exe
-     ```
-- Resultado esperado na tela:
-# Testes de iniciativa
+### Objetivo
+Verificar se a iniciativa é calculada corretamente como `nível + dado`.
 
-Arquivo de testes: `test_iniciativa.c`  
-Função de lógica testada: cálculo da iniciativa (nível + valor do dado)
+### Implementação do Teste
+- Criada função auxiliar `calcularIniciativa_teste()` que substitui `rand()` por valor fixo de dado.
 
-## Caso de teste 1 – Iniciativa simples
+### Dados de Entrada
+| Campo | Valor |
+|-------|-------|
+| Nome | "Heroi" |
+| Nível | 5 |
+| Dado | 6 (d6) |
+| Iniciativa inicial | 0 |
+| **Valor do dado no teste** | **3 (fixo)** |
 
-- Objetivo: verificar se a iniciativa é calculada corretamente como `nivel + dado`.
-- Implementação:
-  - Foi criada uma função de teste `calcularIniciativa_teste`, que recebe um valor fixo de dado (sem aleatoriedade).
-- Entrada:
-  - Personagem com:
-    - nome: "Heroi"
-    - nivel: 5
-    - dado: d6
-    - iniciativa inicial: 0
-  - Valor do dado usado no teste: 3
-- Passos para executar:
-  1. Na pasta raiz do projeto, compilar:
-     ```
-     gcc Testes/test_iniciativa.c rpg.c -o test_iniciativa.exe
-     ```
-  2. Executar:
-     ```
-     test_iniciativa.exe
-     ```
-- Resultado esperad# Testes de iniciativa
+### Resultado Esperado
 
-Arquivo de testes: `test_iniciativa.c`  
-Função de lógica testada: cálculo da iniciativa (nível + valor do dado)
+TESTE INICIATIVA SIMPLES: OK
 
-## Caso de teste 1 – Iniciativa simples
+**Cálculo:** `5 + 3 = 8`
 
-- Objetivo: verificar se a iniciativa é calculada corretamente como `nivel + dado`.
-- Implementação:
-  - Foi criada uma função de teste `calcularIniciativa_teste`, que recebe um valor fixo de dado (sem aleatoriedade).
-- Entrada:
-  - Personagem com:
-    - nome: "Heroi"
-    - nivel: 5
-    - dado: d6
-    - iniciativa inicial: 0
-  - Valor do dado usado no teste: 3
-- Passos para executar:
-  1. Na pasta raiz do projeto, compilar:
-     ```
-     gcc Testes/test_iniciativa.c rpg.c -o test_iniciativa.exe
-     ```
-  2. Executar:
-     ```
-     test_iniciativa.exe
-     ```
-- Resultado esperado na tela:
-    TESTE INICIATIVA SIMPLES: OK
+### Critério de Sucesso
+- Campo `iniciativa` do personagem deve ser atualizado para **8**.
 
-- Critério de sucesso:
-- O campo `iniciativa` do personagem deve ser atualizado para `8` (`5 + 3`).
+## Como Executar
 
-## Como executar os testes de iniciativa
+Na pasta raiz do projeto:
 
-Na pasta do projeto:
-
-"gcc Testes/test_iniciativa.c rpg.c -o test_iniciativa.exe
-test_iniciativa.exe"
+gcc Testes/test_iniciativa.c rpg.c -o test_iniciativa.exe
+./test_iniciativa.exe
