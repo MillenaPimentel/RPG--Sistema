@@ -55,7 +55,9 @@ A ordenação sempre ocorre em ordem decrescente de iniciativa e o usuário pode
 - Fácil de compreender e implementar
 
 No nosso sistema de iniciativa, trabalhamos com uma lista estática de até 50 personagens, cuja ordem é recalculada várias vezes ao longo do combate. Por isso escolhemos dois algoritmos com características complementares:
+
 • Quick Sort, que tem complexidade média O(n log n), é eficiente para dados aleatórios e trabalha in-place, sendo adequado para reordenar a lista de iniciativas a cada turno.
+
 • Insertion Sort, que tem complexidade O(n²), mas para listas pequenas como a nossa é rápido na prática e muito simples de implementar e entender. Ele representa bem a classe dos algoritmos quadráticos e permite comparar, de forma didática, o impacto da complexidade em relação ao Quick Sort.
 Considerando o tamanho máximo da lista (50 elementos), ambos funcionam bem, mas do ponto de vista teórico e escalável, o Quick Sort é o mais indicado.
   
