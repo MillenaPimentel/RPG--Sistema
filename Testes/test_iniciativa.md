@@ -34,5 +34,6 @@ TESTE INICIATIVA SIMPLES: OK
 
 Na pasta raiz do projeto:
 
-gcc Testes/test_iniciativa.c rpg.c -o test_iniciativa.exe
-./test_iniciativa.exe
+gcc Testes/test_iniciativa.c rpg.c -o Testes/test_iniciativa.exe
+Testes\test_iniciativa.exe
+
