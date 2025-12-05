@@ -51,8 +51,8 @@ Função testada: `ordenar(Personagem *lista, int qtd, int metodoOrdenacao)`
 
 Na pasta do projeto:
 
-"gcc test_ordenacao.c rpg.c -o test_ordenacao.exe
-test_ordenacao.exe"
+gcc Testes/test_ordenacao.c rpg.c -o Testes/test_ordenacao.exe
+Testes\test_ordenacao.exe
 
 
 Se ambos os casos estiverem corretos, o programa exibirá:
