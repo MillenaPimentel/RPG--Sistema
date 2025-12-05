@@ -52,6 +52,7 @@ O usuário pode escolher qual algoritmo de ordenação utilizar durante a execu�
 - Algoritmo simples
 - Eficiente para listas pequenas
 - Fácil de compreender e implementar
+
 A ordenação sempre ocorre em ordem decrescente de iniciativa.
   
 ## Fluxo de Execução
